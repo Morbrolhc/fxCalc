@@ -15,10 +15,11 @@ public class App extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws IOException {
-		Parent root = FXMLLoader.load(getClass().getResource("res/fxCalc.fxml"));
+		Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("fxCalc.fxml"));
 		Scene scene = new Scene(root);
 		primaryStage.setTitle("fxCalc");
 		primaryStage.setScene(scene);
+
 		primaryStage.show();
 	}
 }
